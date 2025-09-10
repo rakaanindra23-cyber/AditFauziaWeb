@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya ❤️ Fauzia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navigasi">
+  <div class="logo">
+    <h2>Welcome to Adit & Zia Page</h2>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#banner">Hallo!</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#countdown">Anniversary</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div id="banner" class="banner">
+  <img src="image/aditzia2.jpg">
+  <h1>Hallo..<span></span></h1>
+  <p> Aditya ❤️ Fauzia </p>
+
+  <a href=""><button>Selengkapnya</button></a>
+</div>
+
+
+  <div id="story" class="story">
+    <h2>Our Story</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt architecto dolor doloribus sequi, repudiandae quos mollitia ad sapiente nam libero, tempore assumenda voluptatibus, voluptatem quibusdam modi recusandae omnis totam distinctio. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quidem dolorem, molestiae consequuntur quae porro doloribus explicabo, aperiam veritatis harum cumque? Autem cupiditate quisquam impedit esse animi eligendi excepturi maiores. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laboriosam quo aut, reiciendis iure voluptate vero rerum amet illo at natus earum. Esse maiores error labore animi facere, veritatis commodi?</p>
+  </div>
+
+<div class="countdown">
+  <h2>Menuju Hari Spesial</h2>
+  <p>Kami tidak sabar menantikan hari bahagia kami!</p>
+  <div class="time" id="countdown">166 Hari 8 Jam 28 Menit 48 Detik</div>
+</div>
+
+
+<section id="gallery" class="gallery">
+  <h2> Gallery </h2>
+  <div class="gallery-container">
+    <img src="image/aditzia2.jpg">
+    <img src="foto2.jpg" >
+    <img src="foto3.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+    <img src="foto4.jpg" >
+  </div>
+</section>
+
+
+
+  <script>
+    const targetDate = new Date("Feb 22, 2026 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdownEl.innerHTML = "Happy Anniversary Adit & Zia!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }, 1000);
+  </script>
+</body>
+</html>
